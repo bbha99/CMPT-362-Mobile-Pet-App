@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/nav_personal_moments">
+
+    <fragment
+        android:id="@+id/nav_chats"
+        android:name="com.example.avocadox.ui.chat.ChatsFragment"
+        android:label="@string/chats" />
+
+    <fragment
+        android:id="@+id/nav_personal_moments"
+        android:name="com.example.avocadox.ui.personal_moments.PersonalMomentsFragment"
+        android:label="Personal Moments"
+        tools:layout="@layout/fragment_personal_moments">
+        <action
+            android:id="@+id/action_nav_personal_moments_to_view_ProfileFragment"
+            app:destination="@id/nav_profile_user"
+            app:enterAnim="@anim/slide_in_up"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_nav_personal_moments_to_new_CatFragment"
+            app:destination="@id/nav_profile_cat"
+            app:enterAnim="@anim/slide_in_up"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_nav_personal_moments_to_display_CatFragment"
+            app:destination="@id/nav_display_cat"
+            app:enterAnim="@anim/slide_in_up"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="com.example.avocadox.ui.map.MapFragment"
+        android:label="@string/map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_nav_map_to_bookmarkFragment"
+            app:destination="@id/nav_bookmark"
+            app:enterAnim="@anim/slide_in_up"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_nav_map_to_nav_your_walk"
+            app:destination="@id/nav_your_walk" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_bookmark"
+        android:name="com.example.avocadox.ui.bookmark.BookmarkFragment"
+        android:label="Bookmarks" />
+    <fragment
+        android:id="@+id/nav_bookmark_history"
+        android:name="com.example.avocadox.ui.bookmark.BookmarkHistoryFragment"
+        android:label="Bookmark History" />
+    <fragment
+        android:id="@+id/nav_your_walk"
+        android:name="com.example.avocadox.ui.my_walk.MyWalkFragment"
+        android:label="Your Walk" />
+    <fragment
+        android:id="@+id/nav_profile_cat"
+        android:name="com.example.avocadox.ui.profile.ProfileCatFragment"
+        android:label="Pet Profile" />
+    <fragment
+        android:id="@+id/nav_profile_user"
+        android:name="com.example.avocadox.ui.profile.ProfileUserFragment"
+        android:label="User Profile" />
+    <fragment
+        android:id="@+id/nav_display_cat"
+        android:name="com.example.avocadox.ui.personal_moments.CatDisplayFragment"
+        android:label="Cat Details">
+        <argument
+            android:name="selectedCat"
+            app:argType="com.example.avocadox.database.CatEntry"/>
+    </fragment>
+
+</navigation>

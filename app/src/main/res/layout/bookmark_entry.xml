@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="bookmarkEntry"
+            type="com.example.avocadox.database.BookmarkEntry"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/bookmark_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{bookmarkEntry.name}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Name" />
+
+        <TextView
+            android:id="@+id/bookmark_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{bookmarkEntry.location}"
+            app:layout_constraintStart_toStartOf="@+id/bookmark_name_text"
+            app:layout_constraintTop_toBottomOf="@+id/bookmark_name_text"
+            tools:hint="Location" />
+
+        <TextView
+            android:id="@+id/bookmark_comment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@{bookmarkEntry.comment}"
+            app:layout_constraintStart_toStartOf="@+id/bookmark_location_text"
+            app:layout_constraintTop_toBottomOf="@+id/bookmark_location_text"
+            tools:text="This is a sample content message" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

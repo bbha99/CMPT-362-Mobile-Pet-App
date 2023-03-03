@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "492876972067",
+    "project_id": "cmpt362-356723",
+    "storage_bucket": "cmpt362-356723.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492876972067:android:8b1269190d4558867d7196",
+        "android_client_info": {
+          "package_name": "com.example.avocadox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492876972067-1u9coguvpotbaahm1vogp67ojc8auqfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwyGxrLVjfXnlKhUWbsimYivypnRGBZxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492876972067-1u9coguvpotbaahm1vogp67ojc8auqfa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
